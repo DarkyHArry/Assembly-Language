@@ -129,8 +129,7 @@ cadastrar:
         lea rdi, [rdi + 52]             ; calcula o endereço do buffer
         mov rcx, 50
         rep movsb                       ; copia os 50 bytes
-        ; syscall                       ; REMOVIDO: syscall aqui causaria crash (RAX indefinido)
-
+       
         ; Número = índice
         pop rdi         ; Recupera o início da struct
         mov rax, [total]
